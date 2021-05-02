@@ -8,8 +8,8 @@ Feature: Validating Etsy titles
     Examples:
   |Module | Title|
   |Jewelry & Accessories | Jewelry & Accessories \| Etsy |
-  |Clothing & Shoes      | Clothing & Shoes  \| Etsy  |
-  |Home & Living         | Home & Living  \| Etsy |
+  |Clothing & Shoes      | Clothing & Shoes \| Etsy  |
+  |Home & Living         | Home & Living \| Etsy |
   |Wedding & Party       | Wedding & Party \| Etsy |
   |Toys & Entertainment  | Toys & Entertainment \| Etsy|
   |Art & Collectibles    | Art & Collectibles \| Etsy|

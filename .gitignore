@@ -1,2 +1,5 @@
 # Project exclude paths
 /target/
+# Intellij Configuration folders and files
+/.idea
+MindtekCucumberAutomation.iml
