@@ -2,7 +2,7 @@
 
 Feature: Validating functionalities in View All Orders part
 
-  @Smoke
+  @Smoke @Regression
   Scenario: Validating delete selected order functionality in View All Orders part
     Given User navigates to application
     When User login with username "Tester" and password "test"

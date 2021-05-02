@@ -25,6 +25,9 @@ public class WebOrdersSteps {
     WebOrdersHomePage webOrdersHomePage = new WebOrdersHomePage();
     List<Map<String, Object>> data;
 
+    String deleted1 = webOrdersHomePage.check1Content.toString();
+    String deleted2 = webOrdersHomePage.check3Content.toString();
+    String deleted3 = webOrdersHomePage.checkContent5.toString();
 
 
     @Given("User navigates to application")
@@ -148,7 +151,7 @@ public class WebOrdersSteps {
          webOrdersHomePage.checkBox3.click();
          webOrdersHomePage.checkBox5.click();
 
-
+         // Store names and product values as S
 
          webOrdersHomePage.deleteButton.click();
     }
@@ -159,11 +162,11 @@ public class WebOrdersSteps {
 
         String orderTable = webOrdersHomePage.orderTable.toString();
 
+        // Verify stored names do not exist in the table
+
+        Assert.assertFalse(orderTable.contains(deleted1) || orderTable.contains(deleted2) || orderTable.contains(deleted3));
 
         }
-
-
-
 }
 
 
