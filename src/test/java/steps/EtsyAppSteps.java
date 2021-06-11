@@ -23,7 +23,9 @@ public class EtsyAppSteps {
 
     @Given("User navigates to Etsy application")
     public void user_navigates_to_Etsy_application() {
+
         driver.get(Configuration.getProperty("EtsyURL"));
+
 
     }
 
