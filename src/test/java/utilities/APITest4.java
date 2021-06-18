@@ -3,6 +3,9 @@ package utilities;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 
 public class APITest4 {
@@ -28,5 +31,17 @@ public class APITest4 {
         String token = response.jsonPath().getString("jwt");
 
         System.out.println(token);
+
+        Map <String, Object> headers = new HashMap<>();
+        headers.put("Accept","application/json");
+        headers.put("Content-Type","application/json");
+        headers.put("Authorization","Bearer "+token);
+
+        Response response1 = given().baseUri("https://mindtek-restapi.herokuapp.com/")
+                .and().headers(headers)
+                .when().get("/api/customers");
+
+        System.out.println(response1.body().asString());
+
     }
 }
